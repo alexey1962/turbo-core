@@ -1,0 +1,88 @@
+.header {
+
+  &__container {}
+
+  &__body {
+    padding: 20px 10px;
+    font-family: "Ubuntu", sans-serif;
+  }
+}
+
+.body-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E2E3EF;
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__center {
+  }
+
+  &__right {
+    display: flex;
+  }
+}
+
+.left-header {
+
+  &__logo {
+    margin-right: 10px;
+  }
+
+  &__title {
+    color: $mainOrange;
+    font-size: 24px;
+    line-height: math.div(28, 24);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: math.div(16, 13);
+  }
+
+  &__text-block {
+  }
+}
+
+.center-header {
+  padding: 0 10px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+  }
+
+  &__item {}
+
+  &__link {
+    font-weight: 500;
+    color: $mainDarkColor;
+    text-transform: uppercase;
+  }
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $mainDarkColor;
+  &__register {}
+
+  &__login {
+    border: 1px solid #000000;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
