@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang='en'>
 @@include('./files/html/head.html', {
-    'title': 'Турбо Ядро'
+'title': 'Турбо Ядро'
 })
+
 <body>
-    @@include('./files/html/header.html')
-    <main>
-        
-    </main>
-    @@include('./files/html/footer.html')
-    <script src="js/app.min.js"></script>
+  <!-- @@include('./files/html/header.html') -->
+  <main class="wrapper">
+    <div class="container">
+      <div class="page-lead lead">
+        <div class="lead-content">
+          <div class="lead-left">
+            <h1 class="lead-left__title">Готовая семантика за 1 минуту</h1>
+            <p class="lead-left__text">Сервис <span>автоматического</span> сбора очищенных запросов для любой страницы
+              сайта</p>
+            <div class="lead-left__btn-body btn-body-left">
+              <a href="#" class="btn-body-left__button btn">Попробовать</a>
+              <div class="btn-body-left__text">При регистрации 500 руб., хватит чтобы влюбиться<span></span></div>
+            </div>
+          </div>
+          <div class="lead-right">
+            <img src="./img/lead-image.png" alt="Картинка">
+          </div>
+        </div>
+        <nav class="lead-cards">
+          <article class="card-item">
+            <div class="card-item__image">
+              <img src="@img/lead-cards/01.png" alt="Картинка">
+            </div>
+            <h1 class="card-item__title">Избавит от рутины</h1>
+            <p class="card-item__text">Долой чистку, парсинг, группировку</p>
+          </article>
+          <article class="card-item">
+            <div class="card-item__image">
+              <img src="@img/lead-cards/02.png" alt="Картинка">
+            </div>
+            <h1 class="card-item__title">Легко разобраться</h1>
+            <p class="card-item__text">Всего 2 кнопки</p>
+          </article>
+          <article class="card-item">
+            <div class="card-item__image">
+              <img src="@img/lead-cards/03.png" alt="Картинка">
+            </div>
+            <h1 class="card-item__title">Больше заработаешь</h1>
+            <p class="card-item__text">Высвободится много времени на новых клиентов</p>
+          </article>
+          <article class="card-item">
+            <div class="card-item__image">
+              <img src="@img/lead-cards/04.png" alt="Картинка">
+            </div>
+            <h1 class="card-item__title">Экономия времени</h1>
+            <p class="card-item__text">Не надо обучать сотрудников сбору семантики и сложным действиям</p>
+          </article>
+          <article class="card-item">
+            <div class="card-item__image">
+              <img src="@img/lead-cards/05.png" alt="Картинка">
+            </div>
+            <h1 class="card-item__title">Отсутствие ошибок</h1>
+            <p class="card-item__text">Человеческий фактор и лень никто не отменял, влияющие на полноту их сбора</p>
+          </article>
+        </nav>
+      </div>
+    </div>
+  </main>
+  @@include('./files/html/footer.html')
+  <script src="js/app.min.js"></script>
 </body>
+
 </html>
