@@ -65,6 +65,9 @@
     font-weight: 500;
     color: $mainDarkColor;
     text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

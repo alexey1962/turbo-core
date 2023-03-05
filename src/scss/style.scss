@@ -44,6 +44,11 @@ body {
   }
 }
 
+button {
+  background: transparent;
+  border: none;
+}
+
 .container {
   max-width: 1280px !important;
   margin: 0 auto;
@@ -90,6 +95,7 @@ p {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @if($responsiveType==1) {
@@ -148,6 +154,7 @@ input::-webkit-inner-spin-button {
 
 @import "normalize";
 @import "mixins";
+@import "popup";
 
 @import "header";
 @import "page";

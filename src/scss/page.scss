@@ -27,7 +27,7 @@
   margin-right: 40px;
   &__title {
     color: $mainDarkColor;
-    @include adaptiveValue('font-size', 60, 28);
+    @include adaptiveValue('font-size', 60, 30);
     line-height: math.div(69, 60);
     font-weight: 700;
     font-family: 'Ubuntu', sans-serif;
@@ -125,6 +125,7 @@
   }
 
   &__text {
+    max-width: 190px;
     color: #585967;
   }
 }
