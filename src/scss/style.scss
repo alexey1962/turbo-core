@@ -1,5 +1,6 @@
 @use "sass:math";
 @import "fonts";
+@import "mixins";
 
 a {
   color: inherit;
@@ -82,6 +83,15 @@ p {
   }
 }
 
+.title {
+  @include adaptiveValue('font-size', 46, 28);
+  line-height: math.div(53, 46);
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
 .btn {
   display: inline-block;
   background-color: $mainOrange;
@@ -153,7 +163,6 @@ input::-webkit-inner-spin-button {
 }
 
 @import "normalize";
-@import "mixins";
 @import "popup";
 
 @import "header";
