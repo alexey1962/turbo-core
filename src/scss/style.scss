@@ -108,6 +108,10 @@ p {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 @if($responsiveType==1) {
   [class*="__container"] {
     @if($maxWidthContainer>0) {

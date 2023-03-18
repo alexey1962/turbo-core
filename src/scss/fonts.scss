@@ -20,10 +20,17 @@
 	font-style: normal;
 	}
 @font-face {
+	font-family: mvboli;
+	font-display: swap;
+	src: url("../fonts/mvboli.woff2") format("woff2"), url("../fonts/mvboli");
+	font-weight: 400;
+	font-style: normal;
+	}
+@font-face {
 	font-family: Ubuntu;
 	font-display: swap;
-	src: url("../fonts/Ubuntu-Bold.woff2") format("woff2"), url("../fonts/Ubuntu-Bold");
-	font-weight: 700;
+	src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"), url("../fonts/Ubuntu-Regular");
+	font-weight: 400;
 	font-style: normal;
 	}
 @font-face {
@@ -36,7 +43,7 @@
 @font-face {
 	font-family: Ubuntu;
 	font-display: swap;
-	src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"), url("../fonts/Ubuntu-Regular");
-	font-weight: 400;
+	src: url("../fonts/Ubuntu-Bold.woff2") format("woff2"), url("../fonts/Ubuntu-Bold");
+	font-weight: 700;
 	font-style: normal;
 	}

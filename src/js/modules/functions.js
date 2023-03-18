@@ -154,3 +154,33 @@ export function initForm() {
     !checkbox.checked ? checkbox.checked = true : checkbox.checked = false
   })
 }
+
+export function video() {
+const videoWrappers = document.querySelectorAll('.player-video')
+
+
+videoWrappers.forEach((videoWrapper) => {
+  const videoBtn = videoWrapper.querySelector('.player-video__btn')
+  const videoOverlay = videoWrapper.querySelector('.player-video__overlay')
+  const videoFile = videoWrapper.querySelector('.player-video__object')
+  videoBtn.addEventListener('click', function () {
+    videoOverlay.classList.toggle('hidden')
+    function toggleOverlay(event) {
+      if (event.type === 'mouseleave') {
+        videoBtn.classList.add('hidden')
+      } else {
+        videoBtn.classList.remove('hidden')
+      }
+    }
+    
+    if (videoFile.paused) {
+      videoFile.play()
+      videoBtn.onmouseleave = toggleOverlay
+      videoFile.onmouseenter = toggleOverlay
+    } else {
+      videoFile.pause()
+      videoBtn.onmouseleave = null
+    }
+  })
+})
+}

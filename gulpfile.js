@@ -21,6 +21,7 @@ import { otfToTft, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js"
 import { svgSprive } from "./gulp/tasks/svgSprive.js"
 import { zip } from "./gulp/tasks/zip.js"
 import { ftp } from "./gulp/tasks/ftp.js"
+import { video } from "./gulp/tasks/video.js"
 
 function watcher() {
     gulp.watch(path.watch.files, copy)
@@ -34,7 +35,7 @@ export { svgSprive }
 
 const fonts = gulp.series(otfToTft, ttfToWoff, fontsStyle)
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images))
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, video))
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 const build = gulp.series(reset, mainTasks)
