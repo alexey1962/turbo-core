@@ -237,9 +237,7 @@
   padding: 0 8px 130px;
 }
 
-.video-title {}
-
-.title {
+.video-title {
   @media(min-width: $tablet) {
     margin-bottom: 15px !important;
   }
@@ -427,3 +425,127 @@
     border-radius: 25px;
   }
 }
+
+//==============================================================================================================================================
+.page-buy {}
+
+.buy {
+  padding: 0 15px 140px 15px;
+  &__title {
+    text-align: left;
+    @include adaptiveValue('margin-bottom', 50, 25);
+    @media(max-width: $mobile) {
+      text-align: center;
+    }
+  }
+
+  &__body {}
+}
+
+.body-buy {
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: 1200px) {
+    flex-direction: column;
+    &__left {
+      margin-bottom: 40px;
+      margin-right: 0 !important;
+    }
+    .buy-right__item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .buy-right-descrip {
+      padding-left: 0;
+    }
+    .item-buy-right__image {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__right {}
+}
+
+.buy-left {
+  margin-right: 110px;
+
+  &__wrapper {
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
+    border: 2px dashed #E2E3EF;
+    border-radius: 15px;
+    &>*:not(:last-child) {
+      border-bottom: 2px dashed #E2E3EF;
+    }
+    & > :not(.buy-left__caption) :last-child {
+      @include adaptiveValue('font-size', 20, 18);
+      line-height: math.div(24, 20);
+      span {
+        font-weight: 700;
+        color: $mainOrange;
+      }
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    @include adaptiveValue('padding-left', 30, 20);
+    @include adaptiveValue('padding-right', 30, 20);
+    @include adaptiveValue('padding-top', 25, 20);
+    @include adaptiveValue('padding-bottom', 25, 20);
+  }
+
+  &__caption {
+    text-transform: uppercase;
+    color: #585967;
+    font-weight: 700;
+    @include adaptiveValue('font-size', 14, 12);
+    line-height: math.div(17, 14);
+    
+  }
+
+  &__item {
+    line-height: math.div(18, 16);
+    color: $mainDarkColor;
+  }
+}
+
+.buy-right {
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 10px;
+  }
+}
+
+.item-buy-right {
+
+  &__image {
+    
+  }
+
+  &__descrip {
+    max-width: 450px;
+    padding-left: 15px;
+    & h2 {
+      font-weight: 700;
+      @include adaptiveValue('font-size', 24, 20);
+      line-height: math.div(30, 24);
+      margin-bottom: 10px;
+    }
+    & p {
+      @include adaptiveValue('font-size', 16, 14);
+      line-height: math.div(23, 16);
+      color: #585967;
+    }
+  }
+}
+
+.buy-right-descrip {}
