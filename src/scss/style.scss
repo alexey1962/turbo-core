@@ -83,6 +83,8 @@ p {
   }
 }
 
+.dotts {}
+
 .title {
   @include adaptiveValue('font-size', 46, 28);
   line-height: math.div(53, 46);
@@ -110,6 +112,12 @@ p {
 
 .hidden {
   display: none;
+}
+
+.page {
+  @include adaptiveValue('padding-bottom', 130, 60);
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @if($responsiveType==1) {

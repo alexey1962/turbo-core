@@ -1,5 +1,5 @@
 .lead {
-  padding: 30px 8px 130px;
+  padding-top: 50px;
 }
 
 .lead-content {
@@ -131,11 +131,6 @@
 }
 
 //==============================================================================================================================================
-
-.page-info {
-  padding: 0px 8px 140px;
-}
-
 .info-title {}
 
 .info-content {
@@ -230,13 +225,6 @@
 }
 
 //==============================================================================================================================================
-
-.page-video {}
-
-.video {
-  padding: 0 8px 130px;
-}
-
 .video-title {
   @media(min-width: $tablet) {
     margin-bottom: 15px !important;
@@ -430,7 +418,6 @@
 .page-buy {}
 
 .buy {
-  padding: 0 15px 140px 15px;
   &__title {
     text-align: left;
     @include adaptiveValue('margin-bottom', 50, 25);
@@ -469,9 +456,11 @@
 
 .buy-left {
   margin-right: 110px;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, .15);
+  padding: 5px;
+  border-radius: 15px;
 
   &__wrapper {
-    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
     border: 2px dashed #E2E3EF;
     border-radius: 15px;
     &>*:not(:last-child) {
@@ -549,3 +538,124 @@
 }
 
 .buy-right-descrip {}
+//==============================================================================================================================================
+.page-review {
+  .container {
+    overflow: hidden;
+  }
+}
+
+.review {
+
+  &__title {
+    text-align: left;
+  }
+
+  &__card {
+    display: flex;
+    column-gap: 20px;
+  }
+}
+
+.review-slider {
+
+  &__slider {}
+
+  &__swiper {
+    display: flex;
+  }
+
+  &__slide {
+    display: flex;
+    min-width: 620px;
+  }
+
+  &__dotts {
+    display: flex;
+  }
+}
+
+.review-card {
+  
+  &__user {
+    text-align: center;
+  }
+
+  &__message {}
+
+  &__left {
+    display: flex;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, .1);
+  }
+}
+
+.user-review {
+  max-width: 125px;
+  &__img {}
+
+  &__name {
+    @include adaptiveValue('font-size', 20, 18);
+    line-height: math.div(24, 20);
+    color: $mainDarkColor;
+    margin: 15px 0 10px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: math.div(17, 14);
+    color: #585967;
+  }
+}
+
+.message-review {
+  display: flex;
+  flex-direction: column;
+  max-width: 435px;
+  padding: 25px;
+  position: relative;
+
+  border-radius: 15px;
+  border: 2px dashed #E2E3EF;
+  &__circle {
+    z-index: -1;
+    position: absolute;
+    top: 10px;
+    font-family: "mvboli";
+    background-color: #f35a05;
+    color: #fff;
+    border-radius: 50%;
+    width: 36px;
+    line-height: 36px;
+    height: 36px;
+    text-align: center;
+}
+
+  & h2{
+    color: $mainDarkColor;
+    @include adaptiveValue('font-size', 20, 18);
+    line-height: math.div(24, 20);
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-left: 25px;
+  }
+
+  & p {
+    color: #585967;
+    @include adaptiveValue('font-size', 16, 14);
+    line-height: math.div(20, 16);
+  }
+}
+
+.review-btn {
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    margin-top: 50px;
+  }
+}
+

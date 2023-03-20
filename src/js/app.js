@@ -4,6 +4,7 @@ flsFunctions.isWebp()
 flsFunctions.initPopups()
 flsFunctions.initForm()
 flsFunctions.video()
+flsFunctions.swiper()
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 

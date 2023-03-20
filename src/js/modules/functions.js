@@ -1,3 +1,5 @@
+import Swiper, { Navigation, Pagination } from "swiper";
+
 export function isWebp() {
     function testWebP(callback) {
 
@@ -183,4 +185,94 @@ videoWrappers.forEach((videoWrapper) => {
     }
   })
 })
+}
+
+export function swiper() {
+  //https://swiperjs.com/get-started
+  function buildSliders() {
+    let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)')
+    if (sliders) {
+      sliders.forEach(slider => {
+        slider.parentElement.classList.add('swiper')
+        slider.classList.add('swiper-wrapper')
+        for (const slide of slider.children) {
+          slide.classList.add('swiper-slide')
+        }
+      })
+    }
+  }
+
+  function initSliders() {
+    buildSliders()
+
+    if (document.querySelector('.page-review')) {
+      new Swiper('.review-slider__slider', {
+        modules: [Navigation, Pagination],
+
+        observer: true,
+        observeParents: true,
+        slidesPerView: 2,
+        watchOverflow: true,
+        spaceBetween: 30,
+
+        pagination: {
+          el: '.review-slider__dotts',
+          clickable: true,
+          dynamicBullets: true,
+        },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1370: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          }
+        }
+      })
+    }
+  }
+  function initSlidersScrolls() {
+    buildSliders()
+
+    let sliderScrollItems = document.querySelectorAll('.swiper_scroll')
+    if (sliderScrollItems.length > 0) {
+      for (let i = 0; i < sliderScrollItems.length; i++) {
+        const sliderScrollItem = sliderScrollItems[i]
+        const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar')
+        const sliderScroll = new Swiper(sliderScrollItem, {
+          observer: true,
+          observeParents: true,
+          direction: vertical,
+          slidesPreview: 'auto',
+          freeMode: {
+            enabled: true,
+          },
+
+          scrollbar: {
+            el: sliderScrollBar,
+            draggable: true,
+            snapOnRelease: false,
+          },
+          mousewheel: {
+            releaseOnEdges: true,
+          },
+        })
+        sliderScroll.scrollbar.updateSize()
+      }
+    }
+  }
+  window.addEventListener('load', function (e) {
+    initSliders()
+  })
 }
