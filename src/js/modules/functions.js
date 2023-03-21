@@ -215,28 +215,29 @@ export function swiper() {
         watchOverflow: true,
         spaceBetween: 30,
 
-        pagination: {
-          el: '.review-slider__dotts',
-          clickable: true,
-          dynamicBullets: true,
+        navigation: {
+          nextEl: '.review-slider__button-next',
+          prevEl: '.review-slider__button-prev'
         },
 
         breakpoints: {
           320: {
             slidesPerView: 1,
             spaceBetween: 0,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            pagination: {
+              el: '.review-dotts__bullets',
+              type: 'bullets',
+            }
           },
           1370: {
-            slidesPerView: 4,
+            slidesPerView: 2,
             spaceBetween: 30,
+            pagination: {
+              el: '.review-slider__dotts',
+              type: 'fraction',
+              clickable: true,
+              dynamicBullets: true,
+            },
           }
         }
       })

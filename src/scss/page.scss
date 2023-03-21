@@ -542,6 +542,7 @@
 .page-review {
   .container {
     overflow: hidden;
+    position: relative;
   }
 }
 
@@ -553,7 +554,7 @@
 
   &__card {
     display: flex;
-    column-gap: 20px;
+    padding-bottom: 25px;
   }
 }
 
@@ -567,18 +568,61 @@
 
   &__slide {
     display: flex;
-    min-width: 620px;
   }
 
-  &__dotts {
-    display: flex;
+  // &__dotts {
+  //   @media(min-width: 1370px) {
+  //     display: none;
+  //   }
+  // }
+
+  &__button-next,
+  &__button-prev {
+    z-index: 3;
+    width: 21px;
+    height: 14px;
+    background-image: url("../img/review/wave.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
+
+  .swiper-button-disabled {
+    background-image: url("../img/review/wave-disabled.svg");
+  }
+
+  &__button-next {
+    transform: rotate(180deg);
+    stroke: #000;
+    
+  }
+  &__button-prev {}
+
+  &__number {
+    font-size: 18px;
+    line-height: math.div(22, 18);
+  }
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-slider__buttons {
+  @media(max-width: 1370px) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 }
 
 .review-card {
   
   &__user {
     text-align: center;
+    margin-right: 20px;
   }
 
   &__message {}
@@ -655,7 +699,7 @@
     justify-content: center;
   }
   &__link {
-    margin-top: 50px;
+    margin-top: 25px;
   }
 }
 
