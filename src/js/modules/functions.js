@@ -213,7 +213,7 @@ export function swiper() {
         observeParents: true,
         slidesPerView: 2,
         watchOverflow: true,
-        spaceBetween: 30,
+        spaceBetween: 50,
 
         navigation: {
           nextEl: '.review-slider__button-next',
