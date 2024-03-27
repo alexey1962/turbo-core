@@ -223,7 +223,7 @@ export function swiper() {
         breakpoints: {
           320: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 50,
             pagination: {
               el: '.review-dotts__bullets',
               type: 'bullets',
