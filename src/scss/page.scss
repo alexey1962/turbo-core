@@ -160,6 +160,32 @@
   }
 }
 
+.info-partners {
+  &:nth-child(1) {
+      position: relative;
+  
+      &::before {
+        background: url("../img/partners/partners-1.png") center / cover !important;
+      }
+    }
+  
+    &:nth-child(2) {
+      position: relative;
+  
+      &::before {
+        background: url("../img/partners/partners-2.png") center / cover !important;
+      }
+    }
+  
+    &:nth-child(3) {
+      position: relative;
+  
+      &::before {
+        background: url("../img/partners/partners-3.png") center / cover !important;
+      }
+    }
+}
+
 .info-item {
   border: 1px dashed #E2E3EF;
   border-radius: 15px;
