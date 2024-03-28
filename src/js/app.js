@@ -5,6 +5,7 @@ flsFunctions.initPopups()
 flsFunctions.initForm()
 flsFunctions.video()
 flsFunctions.swiper()
+flsFunctions.accordeon()
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 

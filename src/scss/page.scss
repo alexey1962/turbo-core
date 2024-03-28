@@ -759,3 +759,56 @@
   }
 }
 
+//===ACCORDEON===========================================================================================================================================
+
+.page-accordeon {}
+
+.accordeon {
+
+  &__content {}
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E2E3EF;
+    padding: 40px 20px 20px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__item-inner {
+    
+  }
+
+  &__item-title {
+    @include adaptiveValue('font-size', 24, 18);
+    font-weight: 700;
+  }
+
+  &__item-text {
+    height: 0px;
+    visibility: hidden;
+    margin-top: 20px;
+    color: #585967;
+  }
+
+  &__item-img {}
+}
+
+.accordeon-active {
+  .accordeon__item-text {
+    transition: all .3s;
+    height: auto;
+    visibility: visible;
+  }
+  .accordeon__item-img img{
+    transition: all .3s;
+    transform: rotate(90deg);
+  }
+  .accordeon__item-title {
+    color: $mainOrange;
+  }
+}
