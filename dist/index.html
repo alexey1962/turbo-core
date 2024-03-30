@@ -32,8 +32,41 @@
       <div class="body-header__right right-header">
         <a href="#register" class="right-header__register popup-link">Регистрация</a>
         <a href="#login" class="right-header__login popup-link">Вход</a>
+        <a href="#burger" class="right-header__burger" hidden>
+          <img src="img/burger.svg" alt="burger">
+        </a>
       </div>
     </div>
+    <div class="burger">
+  <div class="container">
+    <ul class="burger__inner">
+      <li class="burger__auth burger-auth">
+        <p class="burger-auth__title">Личный кабинет</p>
+        <div class="burger-auth__buttons">
+          <button class="burger-auth__register">Регистрация</button>
+          <button class="burger-auth__login">Вход</button>
+        </div>
+      </li>
+      <li class="burger__menu burger-menu">
+        <p class="burger-menu__item">Как работает</p>
+        <p class="burger-menu__item">Цены</p>
+        <p class="burger-menu__item">Частые вопросы</p>
+      </li>
+      <li class="burger__footer">
+        <div class="burger-footer__days burger-days">
+          <h1 class="burger-days__title">Дни работы поддержки</h1>
+          <p class="burger-days__text">ПН-ВС. Каждый день</p>
+          <p class="burger-days__text">7:00-20:00 по Москве</p>
+        </div>
+        <div class="burger-footer__contacts burger-contacts">
+          <h1 class="burger-contacts__title">Контакты</h1>
+          <a href="mailto:help@turbo-yadro.ru" class="burger-contacts__text">help@turbo-yadro.ru</a>
+          <a href="tel:+79609969576" class="burger-contacts__text">+7-960-996-95-76</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
     <div id="register" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
@@ -538,9 +571,54 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
   <div class="container">
-    
+    <nav class="footer__inner">
+      <ul class="footer__inner-block">
+        <li class="footer__inner-item">
+          <img src="img/logo-footer.svg" alt="logo">
+        </li>
+        <li class="footer__inner-item footer-copy">
+          <p class="footer-item__text">Турбо Ядро © [2022]. Все права защищены</p>
+        </li>
+      </ul>
+      <ul class="footer__inner-block">
+        <li class="footer__inner-item">
+          <p class="footer-item__text">Дни работы поддержки</p>
+        </li>
+        <li class="footer__inner-item">
+          <h2 class="footer-item__info">ПН-ВС. Каждый день</h2>
+        </li>
+        <li class="footer__inner-item">
+          <h2 class="footer-item__info">7:00-20:00 по Москве</h2>
+        </li>
+      </ul>
+      <ul class="footer__inner-block">
+        <li class="footer__inner-item">
+          <p class="footer-item__text">Контакты</p>
+        </li>
+        <li class="footer__inner-item">
+          <h2 class="footer-item__info">help@turbo-yadro.ru</h2>
+        </li>
+        <li class="footer__inner-item">
+          <h2 class="footer-item__info">+7-960-996-95-76</h2>
+        </li>
+      </ul>
+      <ul class="footer__inner-block">
+        <li class="footer__inner-item">
+          <p class="footer-item__text">Пользовательское соглашение</p>
+        </li>
+        <li class="footer__inner-item">
+          <p class="footer-item__text">Политика оплаты и возврата</p>
+        </li>
+        <li class="footer__inner-item">
+          <p class="footer-item__text">Политика использования Cookie</p>
+        </li>
+        <li class="footer__inner-item footer-copy__mobile" hidden>
+          <p class="footer-item__text">Турбо Ядро © [2022]. Все права защищены</p>
+        </li>
+      </ul>
+    </nav>
   </div>
 </footer>
   <script src="js/app.min.js"></script>

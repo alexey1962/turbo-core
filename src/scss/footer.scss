@@ -1,0 +1,43 @@
+.footer {
+  background-color: #07040C;
+  padding: 80px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  &__inner-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__inner-item {}
+}
+
+.footer-inner {
+
+}
+
+.footer-item {
+  
+  &__text {
+    color: #CACBD7;
+  }
+
+  &__info {
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+@media(max-width: $mobile) {
+  .footer-copy {
+    display: none;
+  }
+  .footer-copy__mobile {
+    display: block;
+  }
+}

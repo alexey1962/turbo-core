@@ -88,4 +88,43 @@
     line-height: 40px;
     text-align: center;
   }
+  &__burger {
+
+  }
+}
+
+@media (max-width: 900px) {
+  .body-header__center {
+    display: none;
+  }
+  .right-header__register {
+    display: none;
+  }
+  .right-header__burger {
+    display: block;
+  }
+}
+
+@media(max-width: $mobile) {
+  .header__body {
+    gap: 5px;
+  }
+  .body-header__left {
+    gap: 5px;
+  }
+  .left-header__logo img {
+    width: 35px;
+  }
+  .left-header__title {
+    font-size: 16px;
+  }
+  .left-header__subtitle {
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .right-header__login {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
 }
