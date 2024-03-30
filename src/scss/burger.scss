@@ -1,0 +1,53 @@
+.burger {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  &__inner {}
+
+  &__auth {}
+
+  &__menu {}
+
+  &__footer {}
+}
+
+.burger-auth {
+
+  &__title {}
+
+  &__buttons {}
+
+  &__register {}
+
+  &__login {}
+}
+
+.burger-menu {
+
+  &__item {}
+}
+
+.burger-footer {
+
+  &__days {}
+
+  &__contacts {}
+}
+
+.burger-days {
+
+  &__title {}
+
+  &__text {}
+}
+
+.burger-contacts {
+
+  &__title {}
+
+  &__text {}
+}

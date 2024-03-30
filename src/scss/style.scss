@@ -53,6 +53,7 @@ button {
 .container {
   max-width: 1280px !important;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 ul {
@@ -124,62 +125,10 @@ p {
   padding-left: 15px;
 }
 
-@if($responsiveType==1) {
-  [class*="__container"] {
-    @if($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-      margin: 0 auto;
-    }
-
-    @if($containerPadding>0) {
-      padding: 0 rem(math.div($containerPadding, 2));
-    }
-  }
-
-}
-
-@else {
-  [class*="__container"] {
-      margin: 0 auto;
-
-  @if($maxWidthContainer>0) {
-    max-width: rem($maxWidthContainer);
-    box-sizing: content-box;
-  }
-
-  @else {
-      @if($containerPadding>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
-  }
-
-  @media(max-width: $pc) {
-    max-width: rem(970);
-  }
-
-  @media(max-width: $tablet) {
-    max-width: rem(750);
-  }
-
-  @media(max-width: $mobile) {
-    max-width: none;
-
-      @if($containerPadding>0 and $maxWidthContainer>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
-    }
-  }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 
 @import "normalize";
 @import "popup";
+@import "burger";
 
 @import "header";
 @import "page";
