@@ -289,3 +289,7 @@ export function accordeon() {
     }
   })
 }
+
+export function burger() {
+  
+}
