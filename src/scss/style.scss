@@ -115,8 +115,16 @@ p {
   cursor: pointer;
 }
 
+.burger-active {
+  overflow: hidden;
+}
+
 .hidden {
   display: none;
+}
+
+.burger-close {
+  background-image: url('/dist/img/close-btn.png')
 }
 
 .page {

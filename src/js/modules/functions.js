@@ -291,5 +291,17 @@ export function accordeon() {
 }
 
 export function burger() {
-  
+  const burgerBtn = document.querySelector('.right-header__burger')
+  let burgerMenu = document.querySelector('.burger')
+  let burgerImg = document.querySelector('.right-header__burger > img')
+  let body = document.querySelector('body')
+
+  const firstSrc = 'img/burger.svg'
+  const secondSrc = 'img/close-btn.svg'
+
+  burgerBtn.addEventListener('click', () => {
+    burgerMenu.classList.toggle('hidden')
+    burgerImg.src.match(firstSrc) ? burgerImg.src = secondSrc : burgerImg.src = firstSrc
+    body.classList.toggle('burger-active')
+  })
 }
